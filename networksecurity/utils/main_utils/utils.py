@@ -54,7 +54,7 @@ def save_object(file_path: str, obj: object) -> None:
         logging.info("Exited the save_object method of MainUtils class")
     except Exception as e:
         raise NetworkSecurityException(e, sys) from e
-"""       
+     
 def load_object(file_path: str, ) -> object:
     try:
         if not os.path.exists(file_path):
@@ -64,12 +64,13 @@ def load_object(file_path: str, ) -> object:
             return pickle.load(file_obj)
     except Exception as e:
         raise NetworkSecurityException(e, sys) from e
-    
+     
 def load_numpy_array_data(file_path: str) -> np.array:
-    
-    load numpy array data from file
-    file_path: str location of file to load
-    return: np.array data loaded
+    """      
+        load numpy array data from file
+        file_path: str location of file to load
+        return: np.array data loaded
+    """      
     
     try:
         with open(file_path, "rb") as file_obj:
@@ -78,7 +79,7 @@ def load_numpy_array_data(file_path: str) -> np.array:
         raise NetworkSecurityException(e, sys) from e
     
 
-
+"""  
 def evaluate_models(X_train, y_train,X_test,y_test,models,param):
     try:
         report = {}
